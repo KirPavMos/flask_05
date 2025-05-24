@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Просмотр базы данных{% endblock %}
+{% block header %}Просмотр всех записей в базе данных{% endblock %}
+
+{% block content %}
+    <section class="card">
+        <h2>Все записи</h2>
+        <div class="notes-container">
+            {% for note in notes %}
+                <article class="note">
+                    <h3>{{ note.title }}</h3>
+                    {% if note.subtitle %}
+                        <h4>{{ note.subtitle }}</h4>
+                    {% endif %}
+                    <p>{{ note.content }}</p>
+                    <small>Создано: {{ note.created_at.strftime('%d.%m.%Y в %H:%M') }}</small>
+                </article>
+            {% endfor %}
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">На главную</a>
+    </section>
+{% endblock %}
