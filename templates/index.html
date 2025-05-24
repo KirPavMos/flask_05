@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section id="about" class="card">
+        <h2>Обо мне</h2>
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Мое фото" class="profile-img">
+        <p>Привет! Я обучаюсь разработке на языке Python, постоянно изучаю новые технологии и улучшаю свои навыки.</p>
+        <p>Мой путь в программировании начался <strong>1 год назад</strong>, и с тех пор я достиг:</p>
+        <ul>
+            <li>Завершил 5 онлайн-курсов по разработке</li>
+            <li>Создал более 10 личных проектов</li>
+            <li>Участвовал в open-source проектах</li>
+        </ul>
+    </section>
+
+    <section id="skills" class="card">
+        <h2>Мои технические навыки</h2>
+        <div class="skills-container">
+            <article>
+                <h3>Фронтенд</h3>
+                <p>HTML5</p>
+            </article>
+            <article>
+                <h3>Бэкенд</h3>
+                <p>Python, Flask</p>
+            </article>
+            <article>
+                <h3>Другие</h3>
+                <p>Git, Docker, SQL</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="progress" class="card">
+        <h2>Прогресс обучения</h2>
+        <table>
+            <thead>
+                    <tr>
+                        <th>Тема</th>
+                        <th>% изучения</th>
+                        <th>% ДЗ</th>
+                        <th>Комментарии</th>
+                        <th>Тема</th>
+                        <th>% изучения</th>
+                        <th>% ДЗ</th>
+                        <th>Комментарии</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Основы Python</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                        <td>Полностью освоил</td>
+                        <td>Основы Linux, Git</td>
+                        <td>95%</td>
+                        <td>90%</td>
+                        <td>Нужна практика с алгоритмами</td>
+                    </tr>
+                    <tr>
+                        <td>Продвинутый Python</td>
+                        <td>85%</td>
+                        <td>80%</td>
+                        <td>Асинхронное программирование требует доработки</td>
+                        <td>Сложные алгоритмы</td>
+                        <td>75%</td>
+                        <td>70%</td>
+                        <td>Нужна практика</td>
+                    </tr>
+                    <tr>
+                        <td>Flask</td>
+                        <td>50%</td>
+                        <td>50%</td>
+                        <td>В процессе освоения</td>
+                        <td>CSS, Jinja</td>
+                        <td>50%</td>
+                        <td>60%</td>
+                        <td>Выполняю практикумы</td>
+                    </tr>
+                    <tr>
+                        <td>Django</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+        </table>
+    </section>
+{% endblock %}
